@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Jailbreaking Black Box Large Language Models in Twenty Queries">
+  <meta name="keywords" content="Jailbreaking, LLMs, adversarial, prompting, red teaming">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jailbreaking Black Box Large Language Models in Twenty Queries</title>
+
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Jailbreaking Black Box Large Language Models in Twenty Queries</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://patrickrchao.github.io/">Patrick Chao</a>,</span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://arobey1.github.io/">Alexander Robey</a>,</span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://statistics.wharton.upenn.edu/profile/dobriban/">Edgar Dobriban</a>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.seas.upenn.edu/~hassani/">Hamed Hassani</a>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.georgejpappas.org/">George J. Pappas</a>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://riceric22.github.io/">Eric Wong</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Pennsylvania</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2310.08419"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/patrickrchao/JailbreakingLLMs"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/overview_video.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified">
+        <span class="pair">PAIR</span> is the state-of-the-art procedure for efficiently generating interpretable jailbreaks, while only needing black box access.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br><br>
+<!-- Explanation video. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">How does <span class="pair">PAIR</span> work?</h2>
+    <div class="content has-text-justified is-centered">
+      <p>
+        <span class="pair">PAIR</span> uses a separate attacker language model to generate jailbreaks on any target model. The attacker model receives a detailed system prompt, instructing it to operate as a red teaming assistant. <span class="pair">PAIR</span> utilizes <i>in-context learning</i> to iteratively refine the candidate prompt until a successful jailbreak by accumulating previous attempts and responses in the chat history. The attacker model also reflects upon the both prior prompt and target model's response to generate an "<i>improvement</i>" as a form of chain-of-thought reasoning, allowing the attacker model to explain its approach, as a form of model interpretablility.
+      </p>
+    </div>
+      <br>
+      
+      <div class="content has-text-centered">
+        <img src="./static/images/pair_example.jpg" style="width:800px;"
+        class="example-image"
+        alt="PAIR example."/>
+      </div>
+    <br><br>
+    <h2 class="title is-3">Explanation Video</h2>
+    <video id="explanation" controls muted loop playsinline height="100%">
+      <source src="./static/videos/explanation_video.mp4"
+              type="video/mp4">
+    </video>
+  </div>
+</div>
+<!--/ Paper video. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            There is growing interest in ensuring that large language models (LLMs) align with human values. However, the alignment of such models is vulnerable to adversarial jailbreaks, which coax LLMs into overriding their safety guardrails. The identification of these vulnerabilities is therefore instrumental in understanding inherent weaknesses and preventing future misuse. To this end, we propose <i>Prompt Automatic Iterative Refinement</i> (<span class="pair">PAIR</span>), an algorithm that generates semantic jailbreaks with only black-box access to an LLM. <span class="pair">PAIR</span> —which is inspired by social engineering attacks— uses an attacker LLM to automatically generate jailbreaks for a separate targeted LLM without human intervention. In this way, the attacker LLM iteratively queries the target LLM to update and refine a candidate jailbreak. Empirically, <span class="pair">PAIR</span> often requires fewer than twenty queries to produce a jailbreak, which is orders of magnitude more efficient than existing algorithms. <span class="pair">PAIR</span> also achieves competitive jailbreaking success rates and transferability on open and closed-source LLMs, including GPT-3.5/4, Vicuna, and PaLM-2. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+  </div>
+</section>
+
+
+
+
+<br><br>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Examples</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-claude2">
+          <img src="./static/images/claude_2.jpg" 
+          class="example-image"
+          alt="Claude-2 jailbreak example." id="Claude-2"/>
+        </div>
+        <div class="item item-gpt4">
+          <img src="./static/images/gpt_4_example.jpg"
+          class="example-image"
+          alt="GPT-4 jailbreak example."  id="GPT-4"/>
+        </div>
+        <div class="item item-gpt35">
+          <img src="./static/images/gpt_3_5_example.jpg"
+                 class="example-image"
+                 alt="GPT-3.5 jailbreak example"  id="GPT-3.5"/>
+        </div>
+        <div class="item item-palm2">
+          <img src="./static/images/palm_example.jpg" 
+          class="example-image"
+          alt="PaLM-2 jailbreak example." id = "PaLM-2" />
+        </div>
+        <div class="item item-claude1">
+          <img src="./static/images/claude_1_example.jpg" 
+          class="example-image"
+          alt="Claude-1 jailbreak example." id = "Claude-1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Results</h2>
+
+        <div class="content has-text-justified is-centered">
+          <p>
+           We evaluate the success rate of <span class="pair">PAIR</span> against the prior state-of-the-art for directly generating jailbreaks on a target model. Since <span class="pair">PAIR</span> does not require access to model weights, we can attack any language model with just API access. <span class="pair">PAIR</span> often succeeds with a few dozen queries, rather than hundreds of thousands.
+          </p>
+        </div>        
+          <div class="content has-text-centered">
+            <img src="./static/images/direct_attacks.png" style="width:800px;"
+            class="example-image"
+            alt="Interpolation end reference image."/>
+          </div>
+          <br>
+          <div class="content has-text-justified is-centered">
+            <p>
+            From <span class="pair">PAIR</span>'s generated jailbreaks, we compare the transferability to different target models. <span class="pair">PAIR</span> achieves state-of-the-art transferability, with notably higher success with more complex models like GPT-4 (we omit transferring to the original target model).
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/transfer_attacks.png" style="width:800px;"
+            class="example-image"
+            alt="Interpolation end reference image."/>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{chao2023jailbreaking,
+      title={Jailbreaking Black Box Large Language Models in Twenty Queries}, 
+      author={Patrick Chao and Alexander Robey and Edgar Dobriban and Hamed Hassani and George J. Pappas and Eric Wong},
+      year={2023},
+      eprint={2310.08419},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          
+          <p>
+            Website template borrowed from <a target="_blank" rel="noopener noreferrer" 
+              href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
