@@ -1,6 +1,8 @@
 # Jailbreaking LLMs
 
-This repository is for the [Jailbreaking-LLMs Website](http://jailbreaking-llms.github.io/).
+This repository is for the Jailbreaking-LLMs website [jailbreaking-llms.github.io](http://jailbreaking-llms.github.io/) for the paper 
+[Jailbreaking Black Box Large Language Models in Twenty Queries](https://arxiv.org/abs/2310.08419).
+
 
 The code to reproduce the experiments and run PAIR yourself is located at [https://github.com/patrickrchao/JailbreakingLLMs](https://github.com/patrickrchao/JailbreakingLLMs).
 
